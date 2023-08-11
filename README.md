@@ -26,13 +26,13 @@ The main objective of this assignment is to demonstrate proficiency in designing
 
 **Data Generation:**
 - A Python script generates simulated real-time orders, which are sent to the Azure Event Hub (brenntag_eh) with a throughput of 1MB.
-![Alt Text](eventhub.png)
+![Alt Text](snapshot/eventhub.png)
 
 **Data Ingestion and Storage:**
 - Initial data is sourced from various locations and received in the demo-data container.
 - Raw data is ingested and transformed into a structured format, stored in the raw container as Parquet files. Duplicate data is detected and avoided.
 Data Transformation:
-![Alt Text](containers.png)
+![Alt Text](snapshot/containers.png)
 
 **Data transformation:**
 - It is performed using the CustomerDataPrep notebook.
@@ -42,7 +42,7 @@ Data Transformation:
 **Streaming Data Processing:**
 - The curated.live_orders table is populated with structured and cleaned data from the Event Hub using PySpark DataFrames in Databricks.
 - Data is continuously processed, ensuring data consistency and availability.
-![Alt Text](databricks_streaming.png)
+![Alt Text](snapshot/databricks_streaming.png)
 
 **Data Analysis:**
 - A comprehensive analysis is conducted by joining cleansed.customers and curated.live_orders tables on the customer_id field.
@@ -66,7 +66,7 @@ Build the Docker Image:
 
 Start the Docker Compose:
 - **docker-compose up**
-![Alt Text](docker_order_generator.png)
+![Alt Text](snapshot/docker_order_generator.png)
 - Real-time data begins flowing to the Azure Event Hub endpoint, initiating the entire solution's workflow.
 
 - Once data starts flowing into the Azure Event Hub endpoint, execute the following notebooks in order:
@@ -79,4 +79,4 @@ ContainerDataTransfer notebook to export data from demo-data to raw container.
 
 ## Results and Insights
 The solution's analysis identifies the top 3 industries that experienced the most significant changes in the last 24 hours compared to the past 30 days' average. These insights provide valuable information for business decision-making.
-![Alt Text](final_result.png)
+![Alt Text](snapshot/final_result.png)
