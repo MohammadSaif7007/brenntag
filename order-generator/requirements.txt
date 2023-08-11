@@ -1,0 +1,6 @@
+python-dateutil
+confluent-kafka
+azure-eventhub
+azure-identity
+websocket-client
+dataclasses
