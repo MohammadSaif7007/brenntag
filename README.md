@@ -23,6 +23,7 @@ The main objective of this assignment is to demonstrate proficiency in designing
 
 ## Solution Architecture
 - The solution architecture is designed to ensure reliability, scalability, and flexibility in processing real-time data and deriving insights. Here's a high-level overview of the architecture:
+![Alt Text](snapshot/flow.png)
 
 **Data Generation:**
 - A Python script generates simulated real-time orders, which are sent to the Azure Event Hub (brenntag_eh) with a throughput of 1MB.
